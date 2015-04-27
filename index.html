@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title> CSS Dropdown Menu</title>
+    <!-- <link rel = "stylesheet" href = "css/reset.css" type = "text/css" /> -->
+    <link rel = "stylesheet" href = "css/style.css" type = "text/css" />
+    <link rel = "stylesheet" href = "font-awesome/css/font-awesome.min.css" type = "text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <meta name = "viewport" content ="width=device-width, initial-scale=1">
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
+
+    <script>
+      $(document).ready(function()
+      {
+          $('#menu-wrap').prepend('<div id="trigger"><span class="fa fa-list fa-fw"></span> Menu</div>');
+          $('#trigger').on('click', function()
+          {
+              $('#menu').slideToggle();
+          });
+      });
+
+
+    </script>
+  </head>
+  <body>
+    <nav id="menu-wrap">
+      <!-- EACH <ul> TAG BEGINS A NEW MENU LEVEL -->
+      <ul id = "menu">
+        <li><a href="#"><span class="fa fa-home fa-fw"></span> Home</a></li>
+        <li><a href="#"><span class="fa fa-search fa-fw"></span> Find a listing</a></li>
+        <li><a href="#"><span class="fa fa-gear fa-fw"></span> Settings</a>
+            <ul>
+              <li><a href="#"><span class="fa fa-male fa-fw"></span> Account</a>
+                <ul>
+                  <li><a href="#"> Update Profile</a></li>
+                  <li><a href="#"> Favourites</a></li>
+                </ul>
+              </li>  <!-- End Account Submenu -->
+              <li><a href="#"><span class="fa fa-magic fa-fw"></span>Theme</a></li>
+            </ul>
+
+        </li> <!-- End Settings Submenu -->
+        <li><a href="#"><span class="fa fa-sign-out fa-fw"></span>Logout</a></li>
+
+      </ul>
+      <!-- END NAVIGATION -->
+
+    </div>
+
+
+  </body>
+
+
+
+
+</html>
